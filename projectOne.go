@@ -13,7 +13,7 @@ func main() {
 	fmt.Println("Please enter the file's name: ")
 	_, err := fmt.Scan(&fileName) //getting file name from user
 	if err != nil {
-		return
+		log.Fatalln("Error reading this file: ", err)
 	}
 
 	fileasBytes, err := ioutil.ReadFile(fileName) //converting file to bytes
